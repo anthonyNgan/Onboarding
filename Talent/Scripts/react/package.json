@@ -1,0 +1,22 @@
+{
+  "name": "react-onboarding",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "wbp": "webpack --config webpack.config.js",
+    "webpack": "webpack is running!"
+  },
+  "watch": true,
+  "author": "Anthony",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.6",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  }
+}

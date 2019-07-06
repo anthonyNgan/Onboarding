@@ -1,0 +1,93 @@
+﻿@model IEnumerable<Talent.Models.Customer>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<div id='customers'></div>
+
+<p>
+    <button class="ui button">Create New</button>
+</p>
+@Html.ActionLink("Create New", "Create")
+<div class="ui modal">
+    <br />
+    <br />
+    <br />
+    <form class="ui form">
+        <h4 class="ui dividing header">Create Customer</h4>
+        <div class="one fields">
+            <div class="field">
+                <label>Name:</label>
+                <div class="field">
+                    <input type="text" name="name" placeholder="Name" />
+                </div>
+            </div>
+        </div>
+        <div class="one fields">
+            <div class="field">
+                <label>Address:</label>
+                <div class="field">
+                    <input type="text" name="Address" placeholder="Name" />
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <div class="actions">
+        <div class="ui black deny button">
+            Cancel
+        </div>
+        <div class="ui positive right labeled icon button">
+            Create
+            <i class="checkmark icon"></i>
+        </div>
+    </div>
+</div>
+
+<table class="ui celled table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Address)
+        </th>
+        <th>Actions</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td data-label="Name">
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td data-label="Address">
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td data-label="Actions">
+                <button class="ui yellow button">@Html.ActionLink("Edit", "Edit", new { id = item.Id })</button>|
+
+                <button class="ui grey button">@Html.ActionLink("Details", "Details", new { id = item.Id })</button>|
+
+                <button class="ui red button">@Html.ActionLink("Delete", "Delete", new { id = item.Id })</button>
+            </td>
+        </tr>
+    }
+
+</table>
+
+<script>
+    $('.ui.modal').modal('attach events', '.ui.button', 'show');
+</script>
+
+@section scripts{
+    <script src="~/Scripts/react/dist/customers.bundle.js"></script>
+}

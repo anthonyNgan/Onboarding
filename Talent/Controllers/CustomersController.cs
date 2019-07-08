@@ -7,7 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using Talent.Models;
-using System.ComponentModel.DataAnnotations;
+
 
 namespace Talent.Controllers
 {
@@ -22,7 +22,25 @@ namespace Talent.Controllers
             return View(db.Customers.ToList());
         }
 
-        // GET: Customers/Details/5
+
+        public JsonResult GetCustomerData()
+        {
+            try
+            {
+                var customerList = db.Customers.Select(x => new { x.Id, x.Name, x.Address }).ToList();
+                return new JsonResult { Data = customerList, JsonRequestBehavior = JsonRequestBehavior.AllowGet };
+
+            }
+            catch (Exception e)
+            {
+                Console.Write("Exception Occured /n {0}", e.Data);
+                return new JsonResult { Data = "Data Not Found", JsonRequestBehavior = JsonRequestBehavior.AllowGet };
+
+            }
+        }
+
+
+         //GET: Customers/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -61,6 +79,8 @@ namespace Talent.Controllers
 
             return View(customer);
         }
+
+
 
         // GET: Customers/Edit/5
         public ActionResult Edit(int? id)

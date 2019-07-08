@@ -1,5 +1,4 @@
 ﻿import React from 'react'
-import CustomerList from './CustomerList'
 
 function Table(props) {
     return (

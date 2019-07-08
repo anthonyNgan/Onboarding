@@ -97,18 +97,6 @@ eval("function _typeof(obj) { if (typeof Symbol === \"function\" && typeof Symbo
 
 /***/ }),
 
-/***/ "./Components/Todo/CustomerList.jsx":
-/*!******************************************!*\
-  !*** ./Components/Todo/CustomerList.jsx ***!
-  \******************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\nvar CustomerList = [{\n  id: \"1\",\n  Name: \"John\",\n  Address: \"box\",\n  Description: \"Awesome Client\"\n}, {\n  id: \"2\",\n  Name: \"Jake\",\n  Address: \"Car\",\n  Description: \"Rather slim shady\"\n}, {\n  id: \"3\",\n  Name: \"Anthony\",\n  Address: \"House\",\n  Description: \"Normal bloke\"\n}];\n/* harmony default export */ __webpack_exports__[\"default\"] = (CustomerList);\n\n//# sourceURL=webpack:///./Components/Todo/CustomerList.jsx?");
-
-/***/ }),
-
 /***/ "./Components/Todo/Table.jsx":
 /*!***********************************!*\
   !*** ./Components/Todo/Table.jsx ***!
@@ -117,7 +105,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var reac
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _CustomerList__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CustomerList */ \"./Components/Todo/CustomerList.jsx\");\n\n\n\nfunction Table(props) {\n  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    className: \"ui container\"\n  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"table\", {\n    className: \"ui celled table\"\n  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"tr\", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"th\", null, \"Name: \", props.table.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"th\", null, \"Address: \", props.table.address), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"th\", null, \"Action\")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"tr\", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"td\", null, \"Name: \", props.tableData.customer), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"td\", null, \"Address: \", props.tableData.customaddress), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"td\", null, \"Action\"))));\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Table);\n\n//# sourceURL=webpack:///./Components/Todo/Table.jsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\n\nfunction Table(props) {\n  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    className: \"ui container\"\n  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"table\", {\n    className: \"ui celled table\"\n  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"tr\", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"th\", null, \"Name: \", props.table.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"th\", null, \"Address: \", props.table.address), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"th\", null, \"Action\")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"tr\", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"td\", null, \"Name: \", props.tableData.customer), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"td\", null, \"Address: \", props.tableData.customaddress), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"td\", null, \"Action\"))));\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Table);\n\n//# sourceURL=webpack:///./Components/Todo/Table.jsx?");
 
 /***/ }),
 

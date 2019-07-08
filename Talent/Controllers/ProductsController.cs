@@ -19,7 +19,22 @@ namespace Talent.Controllers
         {
             return View(db.Products.ToList());
         }
+        
+        public JsonResult GetProductData()
+        {
+            try
+            {
+                var customerList = db.Products.Select(x => new { x.Id, x.Name, x.Price }).ToList();
+                return new JsonResult { Data = customerList, JsonRequestBehavior = JsonRequestBehavior.AllowGet };
 
+            }
+            catch (Exception e)
+            {
+                Console.Write("Exception Occured /n {0}", e.Data);
+                return new JsonResult { Data = "Data Not Found", JsonRequestBehavior = JsonRequestBehavior.AllowGet };
+
+            }
+        }
         // GET: Products/Details/5
         public ActionResult Details(int? id)
         {

@@ -1,13 +1,16 @@
 ﻿import React, {Component } from 'react';
 import ReactDOM from 'react-dom';
-import CustomerCreate from './Components/CustomerCreate';
+
+import CustomerTable from './Components/Customer/CustomerList';
 
 function CustomerPage() {
     return (
-        <CustomerCreate />
+        <div>
+
+            <CustomerTable />
+        </div>
   )
 }
-
 
 ReactDOM.render(
     <CustomerPage />,

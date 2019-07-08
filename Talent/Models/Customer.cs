@@ -11,7 +11,8 @@ namespace Talent.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Customer
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -19,9 +20,12 @@ namespace Talent.Models
         {
             this.Sales = new HashSet<Sale>();
         }
-    
+        
+        
         public int Id { get; set; }
+        [Required (ErrorMessage = "Please enter a name")]
         public string Name { get; set; }
+        [Required(ErrorMessage = "Please enter an Address")]
         public string Address { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

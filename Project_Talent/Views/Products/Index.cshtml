@@ -1,0 +1,15 @@
+﻿@model IEnumerable<Project_Talent.Models.Product>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<br />
+<br />
+<h2>Products</h2>
+
+<div id="products"></div>
+
+@section scripts{
+    <script src="~/Scripts/react/dist/products.bundle.js"></script>
+}
